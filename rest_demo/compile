@@ -1,0 +1,20 @@
+#!/bin/bash
+PROJECT_PATH=/home/seven/KuaiPan/RESTful/rest_demo
+JAR_PATH=$PROJECT_PATH/lib
+BIN_PATH=$PROJECT_PATH/bin
+SRC_PATH=$PROJECT_PATH/src
+
+rm -f $SRC_PATH/sources
+
+# First remove the sources.list file if it exists \
+#and then create the sources file of the project  
+#rm -f $SRC_PATH/sources  
+find $SRC_PATH -name *.java > $SRC_PATH/sources.list  
+  
+rm -rf $BIN_PATH
+mkdir $BIN_PATH
+
+# Compile the project
+javac -d $BIN_PATH \
+-classpath $JAR_PATH/org.restlet.jar:$JAR_PATH/org.restlet.ext.xml.jar \
+@$SRC_PATH/sources.list

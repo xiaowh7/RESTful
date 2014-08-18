@@ -1,0 +1,6 @@
+#!/bin/bash
+curl \
+-d "name=movie1&description=this is an another description." \
+--header "Content-type: application/x-www-form-urlencoded" \
+--request PUT \
+http://localhost:8888/movies/movie1

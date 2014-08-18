@@ -1,0 +1,8 @@
+#!/bin/bash
+PROJECT_PATH=/home/seven/KuaiPan/RESTful/rest_demo
+JAR_PATH=$PROJECT_PATH/lib
+BIN_PATH=$PROJECT_PATH/bin
+SRC_PATH=$PROJECT_PATH/src
+java -classpath \
+$BIN_PATH:$JAR_PATH/org.restlet.jar:$JAR_PATH/org.restlet.ext.xml.jar \
+firstResource.FirstResourceServerMain
